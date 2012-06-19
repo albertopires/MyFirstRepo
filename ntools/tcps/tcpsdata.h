@@ -9,6 +9,7 @@
 #include <pcap.h>
 #include <vector>
 #include <string>
+#include <string.h>
 
 using namespace std;
 

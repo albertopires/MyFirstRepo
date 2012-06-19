@@ -1,7 +1,3 @@
-/*
-    $Name:  $
-    $Date: 2009/11/24 20:54:46 $
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -45,7 +41,7 @@ int main( int argc , char *argv[] ) {
   bpf_u_int32 net;		 /* Our IP */
 
   if( argc < 5 ) {
-    printf( "TCPS v1.1.0a $Date: 2009/11/24 20:54:46 $\n\n" );
+    printf( "TCPS v1.1.1 2012/Jun/19\n\n" );
     printf( "%s <dev> <ip> <port> <string>\n\n" , argv[0]);
     printf( "%s <cap_file> <ip> <port> <string> -f\n\n" , argv[0]);
     if( argc == 2 && (strcmp(argv[1],"-v")==0) )
@@ -75,6 +71,7 @@ int main( int argc , char *argv[] ) {
   
 
   /* Compile and apply the filter */
+  net = 0;
   if (pcap_compile(handle, &fp, filter_exp, 0, net) == -1) {
     fprintf(stderr, "Couldn't parse filter %s: %s\n", filter_exp, pcap_geterr(handle));
     return(2);
