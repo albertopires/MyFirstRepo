@@ -1,7 +1,10 @@
-/*
-    $Name:  $
-    $Date: 2009/11/24 20:54:46 $
-*/
+/*****************************************************************************/
+/* Program : TCPS - String Search on a TCP Stream                            */
+/* Start   : 01/October/2009                                                 */
+/* Author  : Alberto Pires de Oliveira Neto - email:mrpenguin2005@gmail.com  */
+/*                                                                           */
+/* Last modification : 19/June/2012 by Alberto Pires de Oliveira Neto        */
+/*****************************************************************************/
 
 #ifndef _TCPSDATA_H
 #define _TCPSDATA_H

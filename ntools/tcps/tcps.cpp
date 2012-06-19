@@ -1,3 +1,11 @@
+/*****************************************************************************/
+/* Program : TCPS - String Search on a TCP Stream                            */
+/* Start   : 01/October/2009                                                 */
+/* Author  : Alberto Pires de Oliveira Neto - email:mrpenguin2005@gmail.com  */
+/*                                                                           */
+/* Last modification : 19/June/2012 by Alberto Pires de Oliveira Neto        */
+/*****************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,7 +49,7 @@ int main( int argc , char *argv[] ) {
   bpf_u_int32 net;		 /* Our IP */
 
   if( argc < 5 ) {
-    printf( "TCPS v1.1.1 2012/Jun/19\n\n" );
+    printf( "TCPS v1.1.1  -  19/June/2012\n\n" );
     printf( "%s <dev> <ip> <port> <string>\n\n" , argv[0]);
     printf( "%s <cap_file> <ip> <port> <string> -f\n\n" , argv[0]);
     if( argc == 2 && (strcmp(argv[1],"-v")==0) )
