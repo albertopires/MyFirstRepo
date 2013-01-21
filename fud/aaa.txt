@@ -1,0 +1,2 @@
+total 01
+-rw-r--r-- 1 alberto alberto 0 Jan 21 15:39 aaa.txt
