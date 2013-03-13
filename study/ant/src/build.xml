@@ -1,0 +1,10 @@
+<project name="MyProject" default="main" basedir=".">
+
+	<target name="main" depends="lib">
+		<javac srcdir="${basedir}" classpath="../libs/mylib.jar" includeantruntime="false"/>
+	</target>
+
+	<target name="lib">
+		<ant dir="../libs"/>
+	</target>
+</project>

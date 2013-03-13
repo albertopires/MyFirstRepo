@@ -1,0 +1,16 @@
+<project name="MyLib" default="pack-jar" basedir=".">
+
+	<target name="libs">
+		<mkdir dir="${basedir}/classes" />
+		<javac srcdir="${basedir}" destdir="${basedir}/classes" includeantruntime="false"/>
+	</target>
+
+	<target name="pack-jar" depends="libs">
+		<jar destfile="mylib.jar" basedir="${basedir}/classes"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${basedir}/classes" verbose="true"/>
+		<delete file="${basedir}/mylib.jar" verbose="true"/>
+	</target>
+</project>
