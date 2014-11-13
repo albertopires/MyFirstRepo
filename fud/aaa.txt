@@ -1,0 +1,5 @@
+total 012s
+linha 01
+linha 02
+linha 0a
+-rw-r--r-- 1 alberto alberto 0 Jan 21 15:39 aaa.txt
