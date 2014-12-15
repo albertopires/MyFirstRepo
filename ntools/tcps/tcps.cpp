@@ -116,7 +116,7 @@ int main( int argc , char *argv[] ) {
 void got_packet(u_char *args, const struct pcap_pkthdr *header,
 	    const u_char *packet) {
   /* Print its length */
-  const struct sniff_ethernet *ethernet; /* The ethernet header */
+  //const struct sniff_ethernet *ethernet; /* The ethernet header */
   const struct sniff_ip *ip; /* The IP header */
   const struct sniff_tcp *tcp; /* The TCP header */
   const u_char *payload; /* Packet payload */
@@ -126,7 +126,7 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header,
   u_int size_data;
   int port_index;
 
-  ethernet = (struct sniff_ethernet*)(packet);
+  //ethernet = (struct sniff_ethernet*)(packet);
   ip = (struct sniff_ip*)(packet + SIZE_ETHERNET);
   size_ip = IP_HL(ip)*4;
   if (size_ip < 20) {
