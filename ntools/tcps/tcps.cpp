@@ -3,7 +3,7 @@
 /* Start   : 01/October/2009                                                 */
 /* Author  : Alberto Pires de Oliveira Neto - email:mrpenguin2005@gmail.com  */
 /*                                                                           */
-/* Last modification : 19/June/2012 by Alberto Pires de Oliveira Neto        */
+/* Last modification : 16/December/2014 by Alberto Pires de Oliveira Neto    */
 /*****************************************************************************/
 
 #include <stdio.h>
@@ -36,32 +36,32 @@ map<int,CapStream*> stream;
 int dst_port_search;
 
 int main( int argc , char *argv[] ) {
-  char errbuf[PCAP_ERRBUF_SIZE];
-  char *dev;
-  pcap_t *handle;
-  pcap_dumper_t *dump;
-  const u_char *packet;
-  struct pcap_pkthdr header;
-  struct bpf_program fp;      /* The compiled filter */
-  char *filter_exp = (char*)malloc(200);          /* The filter expression */
-  /*char filter_exp[] = "host 10.131.13.33";      The filter expression */
-  /*bpf_u_int32 mask;		  Our netmask */
-  bpf_u_int32 net;		 /* Our IP */
+	char errbuf[PCAP_ERRBUF_SIZE];
+	char *dev;
+	pcap_t *handle;
+	pcap_dumper_t *dump;
+	const u_char *packet;
+	struct pcap_pkthdr header;
+	struct bpf_program fp;      /* The compiled filter */
+	char *filter_exp = (char*)malloc(200);          /* The filter expression */
+	/*char filter_exp[] = "host 10.131.13.33";      The filter expression */
+	/*bpf_u_int32 mask;		  Our netmask */
+	bpf_u_int32 net;		 /* Our IP */
 
-  if( argc < 5 ) {
-    printf( "TCPS v1.1.1  -  19/June/2012\n\n" );
-    printf( "%s <dev> <ip> <port> <string>\n\n" , argv[0]);
-    printf( "%s <cap_file> <ip> <port> <string> -f\n\n" , argv[0]);
-    if( argc == 2 && (strcmp(argv[1],"-v")==0) )
-      printf( "$Name:  $\n" );
-    exit(1);
-  }
+	if( argc < 5 ) {
+		printf( "TCPS v1.1.1  -  16/December/2014\n\n" );
+		printf( "%s <dev> <ip> <port> <string>\n\n" , argv[0]);
+		printf( "%s <cap_file> <ip> <port> <string> -f\n\n" , argv[0]);
+		if( argc == 2 && (strcmp(argv[1],"-v")==0) )
+			printf( "$Name:  $\n" );
+		exit(1);
+	}
 
-  dev = argv[1];
-  search_str = argv[4];
-  dst_port_search = atoi(argv[3]);
+	dev = argv[1];
+	search_str = argv[4];
+	dst_port_search = atoi(argv[3]);
 
-  sprintf( filter_exp , "host %s and tcp and port %s" , argv[2] , argv[3] );
+	sprintf( filter_exp , "host %s and tcp and port %s" , argv[2] , argv[3] );
 
   if( (argc == 6) && (strcmp(argv[5],"-f") ==0 ) ) {
     handle = pcap_open_offline("./ooo.cap" , errbuf);
