@@ -1,5 +1,16 @@
-git config --global core.editor "vim"
-
 # Ignore tracked files locally
 git update-index --assume-unchanged path/to/file.txt
+
+# Aliases
+# Nice log
+git config --global alias.lol 'log --pretty=format:"%h %s" --graph'
+
+
+# Some nice configs
+
+git config --local user.name "Alberto Pires"
+git config --local user.email mrpenguin2005@gmail.com
+
+git config --global color.ui true
+git config --global core.editor vim
 
