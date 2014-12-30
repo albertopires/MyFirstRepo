@@ -14,3 +14,14 @@ git config --local user.email mrpenguin2005@gmail.com
 git config --global color.ui true
 git config --global core.editor vim
 
+
+Branches:
+git branch -a (list all branches)
+git remote prune origin (remove deleted branches)
+
+Tags:
+Renaming:
+git tag new old
+git tag -d old
+git push origin :refs/tags/old
+git push --tags
