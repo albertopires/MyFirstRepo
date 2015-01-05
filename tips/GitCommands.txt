@@ -18,6 +18,7 @@ git config --global core.editor vim
 Branches:
 git branch -a (list all branches)
 git remote prune origin (remove deleted branches)
+git checkout -b newbranch v1.0 (create a new branch from a tag)
 
 Tags:
 Renaming:
