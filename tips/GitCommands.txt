@@ -1,3 +1,6 @@
+# Git Prompt
+https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+
 # Ignore tracked files locally
 git update-index --assume-unchanged path/to/file.txt
 
