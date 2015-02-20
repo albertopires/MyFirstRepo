@@ -34,3 +34,7 @@ git push --tags
 
 Log:
 git log origin/master ^master
+
+Rebase:
+git reset --hard ORIG_HEAD    # Undo a rebase right after the command
+git reset --hard HEAD@{n}     # reset from n th commit
