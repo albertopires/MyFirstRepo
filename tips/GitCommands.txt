@@ -34,6 +34,7 @@ git push --tags
 
 Log:
 git log origin/master ^master
+git branch -a --contains 7e4f1e7 # Finding what branch a commit came from
 
 Rebase:
 git reflog
