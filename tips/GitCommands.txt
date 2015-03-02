@@ -25,6 +25,7 @@ git branch -a (list all branches)
 git remote prune origin (remove deleted branches)
 git checkout -b newbranch v1.0 (create a new branch from a tag)
 git remote show origin
+git push -u origin local_branch (Push local branch to remote)
 
 Tags:
 Renaming:
