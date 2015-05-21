@@ -46,6 +46,10 @@ git reset --hard HEAD@{n}     # reset from n th commit
 Merging
 # Default option for git mergetool (meld) LOCAL BASE REMOTE -> save to MERGED
 git config --global mergetool.meld.cmd 'meld $LOCAL $BASE $REMOTE -o $MERGED'  
+# Show version of files
+git show :2:master.txt > local.txt
+git show :3:master.txt > remote.txt
+
 
 # Simpler view compare just between LOCAL and REMOTE -> save to MERGED
 git config --global mergetool.meld.cmd 'meld $LOCAL $REMOTE -o $MERGED'
