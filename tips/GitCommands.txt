@@ -54,3 +54,13 @@ git show :3:master.txt > remote.txt
 
 # Simpler view compare just between LOCAL and REMOTE -> save to MERGED
 git config --global mergetool.meld.cmd 'meld $LOCAL $REMOTE -o $MERGED'
+
+
+-- !!! COOL !!!
+Clone your project from on repo to another different one, like from Bitbucket to Github
+$ cd $HOME
+$ git clone --bare https://git.fedorahosted.org/the/path/to/my_repo.git
+$ cd my_repo.git
+$ git push --mirror https://github.com/my_username/my_repo.git
+$ cd ..
+$ rm -rf my_repo.git
