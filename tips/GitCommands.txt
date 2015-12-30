@@ -55,6 +55,8 @@ git show :3:master.txt > remote.txt
 # Simpler view compare just between LOCAL and REMOTE -> save to MERGED
 git config --global mergetool.meld.cmd 'meld $LOCAL $REMOTE -o $MERGED'
 
+# Repositories
+git remote set-url origin git@bitbucket.org:albertopires/tutorial.git
 
 -- !!! COOL !!!
 Clone your project from on repo to another different one, like from Bitbucket to Github
