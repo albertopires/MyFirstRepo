@@ -18,6 +18,8 @@ git config --global color.ui true
 git config --global core.editor vim
 git config credential.helper 'cache --timeout 360'
 
+Basics:
+git commit --allow-empty -m "resolve issue #1 and #2" # Create empty commit
 
 Branches:
 git push --delete origin hotfix-000 (delete remote branch)
