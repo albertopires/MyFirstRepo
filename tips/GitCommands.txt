@@ -16,7 +16,7 @@ git config --local user.email mrpenguin2005@gmail.com
 
 git config --global color.ui true
 git config --global core.editor vim
-git config credential.helper 'cache --timeout 360'
+git config --global credential.helper 'cache --timeout 3600'
 
 Basics:
 git commit --allow-empty -m "resolve issue #1 and #2" # Create empty commit
