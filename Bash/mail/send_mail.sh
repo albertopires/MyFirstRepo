@@ -17,7 +17,7 @@ FILE_NAME=$4
 	"From: $FROM_NAME <$FROM>" \
 	"To: $RCPT" \
 	"Content-Type: application/x-xz" \
-	"Content-Disposition: attachment; filename=$FILE_NAME" \
+	"Content-Disposition: attachment; filename=$(basename $FILE_NAME)" \
 	"Content-Transfer-Encoding: base64" \
 	"";
 base64 $FILE_NAME) | sendmail -f "$FROM" "$RCPT"
