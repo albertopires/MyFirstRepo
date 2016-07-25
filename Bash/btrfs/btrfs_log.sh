@@ -11,13 +11,14 @@ FROM=$2
 FROM_NAME=$3
 RCPT=$4
 
-BASE_DIR=.
+LOG_DIR=/tmp/btrfs_logs
 PAST_HOUR=$(date +'%b %e %H:[0-9][0-9]:[0-9][0-9] ' -d "1 hour ago")
-PAST_HOUR_NAME=$BASE_DIR/out_$(date +'%Y%m%d_%H' -d "1 hour ago").log
+PAST_HOUR_NAME=$LOG_DIR/out_$(date +'%Y%m%d_%H' -d "1 hour ago").log
 
 SEND_MAIL_CMD=../mail/send_mail.sh
 
 echo $PAST_HOUR
+SUBJECT="BTRFS errors found : $(basename $PAST_HOUR_NAME).xz"
 
 cat $LOG_FILE | grep -i btrfs | egrep "$PAST_HOUR"  |\
 	egrep -i "corrupt|csum" > $PAST_HOUR_NAME
@@ -28,6 +29,6 @@ echo "Log lines counted: "$LOG_LINES
 if [ "$LOG_LINES" -gt 0 ]; then
 	echo "Log lines found : "$LOG_LINES
 	xz $PAST_HOUR_NAME
-	$SEND_MAIL_CMD $FROM "$FROM_NAME" $RCPT $PAST_HOUR_NAME.xz
+	$SEND_MAIL_CMD $FROM "$FROM_NAME" $RCPT "$SUBJECT" $PAST_HOUR_NAME.xz
 fi
 
