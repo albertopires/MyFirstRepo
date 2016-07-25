@@ -21,6 +21,13 @@ echo $PAST_HOUR
 
 cat $LOG_FILE | grep -i btrfs | egrep "$PAST_HOUR"  |\
 	egrep -i "corrupt|csum" > $PAST_HOUR_NAME
-xz $PAST_HOUR_NAME
 
-$SEND_MAIL_CMD $FROM "$FROM_NAME" $RCPT $PAST_HOUR_NAME.xz
+LOG_LINES=`wc -l $PAST_HOUR_NAME | awk '{print $1}'`
+echo "Log lines counted: "$LOG_LINES
+
+if [ "$LOG_LINES" -gt 0 ]; then
+	echo "Log lines found : "$LOG_LINES
+	xz $PAST_HOUR_NAME
+	$SEND_MAIL_CMD $FROM "$FROM_NAME" $RCPT $PAST_HOUR_NAME.xz
+fi
+
