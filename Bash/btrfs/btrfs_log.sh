@@ -17,7 +17,7 @@ PAST_HOUR_NAME=$LOG_DIR/out_$(date +'%Y%m%d_%H' -d "1 hour ago").log
 
 SEND_MAIL_CMD=../mail/send_mail.sh
 
-echo $PAST_HOUR
+#echo $PAST_HOUR
 SUBJECT="BTRFS errors found : $(basename $PAST_HOUR_NAME).xz"
 
 cat $LOG_FILE | grep -i btrfs | egrep "$PAST_HOUR"  |\
