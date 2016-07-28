@@ -1,5 +1,6 @@
 #!/bin/bash
 
+LOG_SILENT=0
 LOG_VERBOSE=1
 LOG_DEBUG=2
 
