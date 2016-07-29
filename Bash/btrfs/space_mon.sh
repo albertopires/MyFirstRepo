@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CMD="cat /tmp/usage.txt"
+#CMD="cat /tmp/usage.txt"
+CMD="btrfs fi usa -b $1"
 
 TMP_FILE="btrfs_us_$$"
 $CMD > $TMP_FILE
