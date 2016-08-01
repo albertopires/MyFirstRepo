@@ -36,8 +36,8 @@ BASEDIR=$(dirname $0)
 PAST_HOUR=$(date +'%b %e %H:[0-9][0-9]:[0-9][0-9] ' -d "1 hour ago")
 PAST_HOUR_NAME=$LOG_DIR/out_$(date +'%Y%m%d_%H' -d "1 hour ago").log
 
-print_log 2 "Hour regex: $PAST_HOUR"
-print_log 2 "LOG_DIR   : $LOG_DIR"
+print_log $LOG_DEBUG "Hour regex: $PAST_HOUR"
+print_log $LOG_DEBUG "LOG_DIR   : $LOG_DIR"
 
 SUBJECT="BTRFS errors found : $(basename $PAST_HOUR_NAME).xz"
 
