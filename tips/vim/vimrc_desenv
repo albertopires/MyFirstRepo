@@ -1,4 +1,3 @@
-" Code style with tab for ident and space for a specific directory
 filetype plugin indent on
 
 :set tabstop=8
@@ -6,4 +5,10 @@ filetype plugin indent on
 :set shiftwidth=8
 :set noexpandtab
 
-autocmd BufNewFile,BufRead /home/alberto/git/tutorial/openssl/* set expandtab
+autocmd BufNewFile,BufRead /home/alberto/git/tutorial/cppcommons/* set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead /home/alberto/git/tutorial/openssl/* set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead /home/alberto/git/tutorial/tuntap/* set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead /home/alberto/git/tutorial/ip_tunnel_mlink/* set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+
+autocmd BufNewFile,BufRead /home/alberto/git/mhftp/* set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+
