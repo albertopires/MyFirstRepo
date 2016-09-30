@@ -1,1 +1,2 @@
 dosfsck -t -a -w /dev/sdb1
+dosfsck -v -a -w /dev/sdb1
