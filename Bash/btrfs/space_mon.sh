@@ -39,13 +39,13 @@ FREE_ESTIMAT=`cat $TMP_FILE | awk '/Free\ \(estimated\)\:/ { print $3 }'`
 print_log $LOG_VERBOSE "Device size    : "$DEVICE_SIZE
 print_log $LOG_VERBOSE "Free Estimated : "$FREE_ESTIMAT
 
-PERCENT_FREE=$(awk "BEGIN { printf \"%.2f\",(100-(${FREE_ESTIMAT}/${DEVICE_SIZE})*100) }")
-PERCENT_FREE_INT=$(awk "BEGIN { printf \"%.0f\",(100-(${FREE_ESTIMAT}/${DEVICE_SIZE})*100) }")
-print_log $LOG_VERBOSE "Data : "$PERCENT_FREE
+PERCENT_USED=$(awk "BEGIN { printf \"%.2f\",(100-(${FREE_ESTIMAT}/${DEVICE_SIZE})*100) }")
+PERCENT_USED_INT=$(awk "BEGIN { printf \"%.0f\",(100-(${FREE_ESTIMAT}/${DEVICE_SIZE})*100) }")
+print_log $LOG_VERBOSE "Percent USED : "$PERCENT_USED
 
 rm -f $TMP_FILE
 
-if [ "$PERCENT_FREE_INT" -gt $US_THRESHOLD ]; then
-	print_log $LOG_DEBUG "Disk space alarm : "$PERCENT_FREE"%"
+if [ "$PERCENT_USED_INT" -gt $US_THRESHOLD ]; then
+	print_log $LOG_DEBUG "Disk space alarm : "$PERCENT_USED"%"
 	$CMD_H > $LOG_FILE
 fi
