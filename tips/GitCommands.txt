@@ -40,7 +40,7 @@ git push --tags
 Log:
 git log origin/master ^master
 git branch -a --contains 7e4f1e7 # Finding what branch a commit came from
-
+git show --format="%aN <%aE>" 89e973a5570a5b9195a516c205be389f4fc16a7b # Show committer's email
 Rebase:
 git reflog
 git reset --hard ORIG_HEAD    # Undo a rebase right after the command
