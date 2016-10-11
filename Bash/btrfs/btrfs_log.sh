@@ -42,7 +42,7 @@ print_log $LOG_DEBUG "LOG_DIR   : $LOG_DIR"
 SUBJECT="BTRFS errors found : $(basename $PAST_HOUR_NAME).xz"
 
 cat $LOG_FILE | grep -i btrfs | egrep "$PAST_HOUR"  |\
-	egrep -i "corrupt|csum" > $PAST_HOUR_NAME
+	egrep -i "corrupt|csum|enospc" > $PAST_HOUR_NAME
 
 LOG_LINES=`wc -l $PAST_HOUR_NAME | awk '{print $1}'`
 print_log $LOG_DEBUG "Log lines counted: "$LOG_LINES
