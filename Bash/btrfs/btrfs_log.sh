@@ -52,7 +52,7 @@ if [ "$LOG_LINES" -gt 0 ]; then
 	xz $PAST_HOUR_NAME
 	if [ "$SEND_MAIL" -ne 0 ]; then
 		print_log $LOG_DEBUG "Sending email..."
-		$SEND_MAIL_CMD $FROM "$FROM_NAME" $RCPT "$SUBJECT" $PAST_HOUR_NAME.xz
+		$SEND_MAIL_CMD $FROM "$FROM_NAME" "$RCPT" "$SUBJECT" $PAST_HOUR_NAME.xz
 	fi
 fi
 
