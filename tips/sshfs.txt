@@ -1,0 +1,2 @@
+# sshfs mount command
+sshfs user@host:/remote_dir /mount_point -o Ciphers=arcfour
