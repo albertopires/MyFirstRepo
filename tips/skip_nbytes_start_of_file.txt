@@ -1,0 +1,2 @@
+dd bs=1 skip=1131 if=filtered.dump of=trimmed.dump
+
