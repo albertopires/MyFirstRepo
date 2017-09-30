@@ -1,0 +1,5 @@
+Show databases:
+\l
+
+Switch database:
+\connect mydb
