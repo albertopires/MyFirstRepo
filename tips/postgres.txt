@@ -1,3 +1,6 @@
+# Disable SSL
+export PGSSLMODE=disable
+
 Show databases:
 \l
 
