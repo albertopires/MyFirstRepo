@@ -7,8 +7,22 @@ Show databases:
 Switch database:
 \connect mydb
 
+# Create schema:
+xdrmeta=> create schema santander authorization xdr;
+CREATE SCHEMA
+xdrmeta=> 
+
+
 # Set default schema
 xdrmeta=> alter user xdr set search_path to santander;
 ALTER ROLE
 xdrmeta=> 
 
+# Change default port on Centos 7
+edit /lib/systemd/system/postgresql.service
+
+# Grant access to a database for a user
+grant all privileges on database xdrmeta to xdr;
+
+# Change password for a user:
+\password <user>
