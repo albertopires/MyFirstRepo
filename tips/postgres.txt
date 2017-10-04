@@ -6,3 +6,9 @@ Show databases:
 
 Switch database:
 \connect mydb
+
+# Set default schema
+xdrmeta=> alter user xdr set search_path to santander;
+ALTER ROLE
+xdrmeta=> 
+
