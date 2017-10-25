@@ -26,3 +26,6 @@ grant all privileges on database xdrmeta to xdr;
 
 # Change password for a user:
 \password <user>
+
+# Initialize Postgres:
+/var/lib/pgsql9/data is missing. Use "service postgresql initdb" to initialize the cluster first.
