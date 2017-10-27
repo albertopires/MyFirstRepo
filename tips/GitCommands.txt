@@ -58,6 +58,11 @@ git config --global mergetool.meld.cmd 'meld $LOCAL $BASE $REMOTE -o $MERGED'
 git show :2:master.txt > local.txt
 git show :3:master.txt > remote.txt
 
+# Merge just one file:
+git checkout --patch B f 
+# Original article about merge of single file:
+https://stackoverflow.com/questions/10784523/how-do-i-merge-changes-to-a-single-file-rather-than-merging-commits
+
 
 # Simpler view compare just between LOCAL and REMOTE -> save to MERGED
 git config --global mergetool.meld.cmd 'meld $LOCAL $REMOTE -o $MERGED'
