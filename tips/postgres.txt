@@ -12,6 +12,9 @@ xdrmeta=> create schema santander authorization xdr;
 CREATE SCHEMA
 xdrmeta=> 
 
+# Show schemas:
+select * from pg_namespace;
+
 
 # Set default schema
 xdrmeta=> alter user xdr set search_path to santander;
