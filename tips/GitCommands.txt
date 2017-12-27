@@ -20,7 +20,9 @@ git config --global core.editor vim
 git config --global credential.helper 'cache --timeout 3600'
 
 Basics:
-git commit --allow-empty -m "resolve issue #1 and #2" # Create empty commit
+git commit --allow-empty -m "resolve issue #1 and #2"    # Create empty commit
+git commit --amend --date "Wed Dec 27 16:09:23 -02 2017" # Change commit date (unix command date)
+git commit --amend --date "`date`"                       # Change commit date (unix command date)
 
 Branches:
 git push --delete origin hotfix-000 (delete remote branch)
