@@ -44,6 +44,9 @@ git tag -d old
 git push origin :refs/tags/old
 git push --tags
 
+Updating/Prune:
+git fetch --prune origin "+refs/tags/*:refs/tags/*"
+
 Log:
 git log origin/master ^master
 git branch -a --contains 7e4f1e7 # Finding what branch a commit came from
