@@ -1,0 +1,4 @@
+Bash has several builtin ways to manipulate variables.
+ ${foo//bar/baz} will replace all instances of "bar" with "baz" in the variable ${foo}.
+ #bashtricks You can use this substitution
+ to show all setuid bins in your PATH: find ${PATH//:/ } -perm /u=s
