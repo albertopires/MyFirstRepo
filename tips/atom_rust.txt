@@ -1,0 +1,5 @@
+# Install language-rust
+apm install language-rust
+
+# Install rust-ide (https://atom.io/packages/ide-rust)
+apm install ide-rust
