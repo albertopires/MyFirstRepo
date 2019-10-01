@@ -1,0 +1,13 @@
+The worst part is python3.6:
+
+types for Ubuntu 16.04:
+
+add-apt-repository ppa:deadsnakes/ppa
+apt-get update
+apt-get install python3.6
+
+curl https://bootstrap.pypa.io/get-pip.py | python3.6
+apt-get install python3-pyqt5
+python3.6 -m pip install PyQt5
+
+python3.6 -m pip install 3.3.8.tar.gz
