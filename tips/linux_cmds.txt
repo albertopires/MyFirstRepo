@@ -1,0 +1,2 @@
+# List all processes per user
+ps -ef | awk '{print$1}' | sort | uniq -c | sort -nr
