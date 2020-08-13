@@ -1,5 +1,8 @@
 # List all processes per user
 ps -ef | awk '{print$1}' | sort | uniq -c | sort -nr
 
+# Another full processe info cmd
+ps -o f,s,uid,pid,ppid,c,pri,ni,rss,wchan:20,stime,tty,time,cmd --forest -p `pidof my_process`
+
 # Show cpu clock
 watch -n1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
