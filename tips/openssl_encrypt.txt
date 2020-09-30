@@ -1,1 +1,5 @@
+Encrypt:
 openssl aes-256-cbc -a -salt -pbkdf2 -in plaintext.txt -out encrypted.txt
+
+Decrypt:
+openssl aes-256-cbc -d -a -pbkdf2 -in encrypted.txt -out plaintext.txt
