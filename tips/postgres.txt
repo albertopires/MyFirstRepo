@@ -32,3 +32,9 @@ grant all privileges on database xdrmeta to xdr;
 
 # Initialize Postgres:
 /var/lib/pgsql9/data is missing. Use "service postgresql initdb" to initialize the cluster first.
+
+# Describe table
+select table_name, column_name, data_type, ordinal_position
+	from information_schema.columns
+	where table_name = 'pg_dist_node' order by ordinal_position;
+

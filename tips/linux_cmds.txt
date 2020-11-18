@@ -6,3 +6,9 @@ ps -o f,s,uid,pid,ppid,c,pri,ni,rss,wchan:20,stime,tty,time,cmd --forest -p `pid
 
 # Show cpu clock
 watch -n1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
+
+# Copy contents of a file into the clipboard
+https://unix.stackexchange.com/questions/211817/copy-the-contents-of-a-file-into-the-clipboard-without-displaying-its-contents#
+xclip -sel c < file
+xsel -b < file
+mycommand | xclip -sel c
