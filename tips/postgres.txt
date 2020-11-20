@@ -4,6 +4,9 @@ export PGSSLMODE=disable
 Show databases:
 \l
 
+List tables:
+\dt
+
 Switch database:
 \connect mydb
 
