@@ -1,0 +1,5 @@
+python -m http.server 8080  # for python3
+
+or 
+
+python -m SimpleHTTPServer 8080 # for python2
