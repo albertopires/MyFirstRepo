@@ -1,0 +1,4 @@
+# Set curret project
+Your current project is [None].  You can change this setting by running:
+  $ gcloud config set project PROJECT_ID
+
