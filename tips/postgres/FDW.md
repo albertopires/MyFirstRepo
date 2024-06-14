@@ -47,7 +47,8 @@ Check for Query Cancellation:
 
 If **EINTR** is received, check if the query has been cancelled. PostgreSQL provides macros like CHECK_FOR_INTERRUPTS() to handle query cancellations.
 
-**Example Code Snippet:**
+Here’s an example of handling **EINTR** in a loop:
+
 ```c
 Here’s an example of handling **EINTR** in a loop:
 #include <errno.h>
