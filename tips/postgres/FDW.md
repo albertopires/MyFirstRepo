@@ -50,7 +50,6 @@ If **EINTR** is received, check if the query has been cancelled. PostgreSQL prov
 Here’s an example of handling **EINTR** in a loop:
 
 ```c
-Here’s an example of handling **EINTR** in a loop:
 #include <errno.h>
 #include <signal.h>
 
