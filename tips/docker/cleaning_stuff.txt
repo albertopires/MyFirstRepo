@@ -1,0 +1,5 @@
+# Clean all images and containers (except for dangling volumes)
+docker system prune -a
+
+# Remove dangling volumes
+docker volume rm $(docker volume ls -qf dangling=true)

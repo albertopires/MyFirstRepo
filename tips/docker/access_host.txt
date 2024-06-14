@@ -1,0 +1,3 @@
+# The name host.docker.internet should be resolvable inside the container
+# But if it isn't add the option below:
+--add-host host.docker.internal:host-gateway
