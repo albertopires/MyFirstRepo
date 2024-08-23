@@ -1,0 +1,3 @@
+Formula to convert milliseconds to elapsed time:
+
+=TEXT(A2/86400000,"[h]:mm:ss.000")
