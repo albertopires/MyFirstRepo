@@ -12,3 +12,6 @@ https://unix.stackexchange.com/questions/211817/copy-the-contents-of-a-file-into
 xclip -sel c < file
 xsel -b < file
 mycommand | xclip -sel c
+
+# Show markdown as html
+pandoc README.md | lynx -stdin
