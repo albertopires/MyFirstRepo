@@ -85,3 +85,8 @@ $ cd my_repo.git
 $ git push --mirror https://github.com/my_username/my_repo.git
 $ cd ..
 $ rm -rf my_repo.git
+
+# Show start of branch (mybranch)
+git log master..mybranch --reverse --oneline
+git log $(git merge-base main mybranch)..mybranch --reverse
+
