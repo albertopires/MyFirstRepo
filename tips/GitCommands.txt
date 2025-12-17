@@ -90,3 +90,11 @@ $ rm -rf my_repo.git
 git log master..mybranch --reverse --oneline
 git log $(git merge-base main mybranch)..mybranch --reverse
 
+
+-----------------------------------------------------
+-- Git Prompt:
+
+sudo apt update
+sudo apt install bash-completion git-core
+
+. /usr/share/bash-completion/bash_completion
