@@ -1,0 +1,7 @@
+pidstat -t -p <pid>
+
+# Use this plus -c in the watch command to print colors
+export S_COLORS=always
+watch -c pidstat -t -p <pid>
+
+sudo perf top -p <pid>
