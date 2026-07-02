@@ -1,0 +1,5 @@
+pdftoppm -png -r 300 Case_endings_5_decl_1_1.pdf ooo
+
+# PPM (default), -png, -jpeg, -tiff
+-r 300 (300 DPI) defalt 150 (maybe)
+ooo - image prefix name
