@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo ps -o f,s,uid,pid,ppid,c,pri,ni,rss,wchan:20,stime,tty,time,cmd --forest -p `pidof $1`
+
